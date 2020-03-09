@@ -1,0 +1,49 @@
+<app-header></app-header>
+<div class="registration-wrap">
+  <mat-card class="registration-card">
+    <form #registrationForm="ngForm" class="registration-form form" [appMatchPassword]="['password', 'confirmPassword']" 
+        (ngSubmit)="registrationForm.form.valid && onSubmit(registrationForm)" novalidate >
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput type="text" class="form-control" [(ngModel)]="userModal.email" name="email"
+          #email="ngModel" appValidateEmail ngModel name="email" placeholder="Email" required email/>
+        <mat-error *ngIf="email.errors?.required">Email is required.</mat-error>
+        <mat-error *ngIf="email.errors?.email">Enter a valid email address.</mat-error>
+        <mat-error *ngIf="email.errors?.userEmailNotAvailable">Email already in use!</mat-error>
+      </mat-form-field>
+      <br>
+      <br>
+      <mat-form-field>
+        <mat-label>Username</mat-label>
+        <input matInput type="text" class="form-control" [(ngModel)]="userModal.username" name="username"
+          #username="ngModel" appValidateUserName ngModel placeholder="Username" required/>
+        <mat-error *ngIf="username.errors?.required" >Username is required.</mat-error>
+        <mat-error *ngIf="username.errors?.userNameNotAvailable">Username not available!</mat-error>
+      </mat-form-field>
+      <br>
+      <br>
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input matInput type="password" class="form-control" [(ngModel)]="userModal.password" name="password"
+          #password="ngModel" appPasswordPattern ngModel name="password" placeholder="Password" required/>
+        <mat-error *ngIf="password.errors?.required">Password is required.</mat-error>
+        <mat-error *ngIf="password.errors?.invalidPassword">Password should have minimum 8 characters, at least 1 uppercase letter, 1 lowercase
+        letter and 1 number.</mat-error>
+      </mat-form-field>
+      <br>
+      <br>
+      <br>
+      <mat-form-field>
+        <mat-label>Confirm Password</mat-label>
+        <input matInput type="password" class="form-control" [(ngModel)]="userModal.confirmPassword"
+          name="confirmPassword" #confirmPassword="ngModel" placeholder="Confirm Password" required/>
+        <mat-error *ngIf="confirmPassword.errors?.required">Confirm Password is required.</mat-error>
+        <mat-error *ngIf="confirmPassword.errors?.passwordMismatch">Passwords do not match!</mat-error>
+      </mat-form-field>
+      <br>
+      <button mat-button type="submit">
+        Register
+      </button>
+    </form>
+  </mat-card>
+</div>

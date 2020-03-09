@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "id": "dj190wjd91iwjd0192wj1-9id1j019iwjd10ijd1",
+      "username": "yoloman1",
+      "email": "yolo@swag.com",
+      "password": "something that would be enhashed"
+    },
+    {
+      "id": "dj19saqweqweqdasdasdas1-019iwjdqweq10ijd2",
+      "username": "yoloman2",
+      "email": "yolo2@swag.com",
+      "password": "something that would be enhashed"
+    },
+    {
+      "id": "1f47baa7-b840-4db9-97da-a3065ff75732",
+      "email": "yolo3@swag.com",
+      "username": "yoloman3",
+      "password": "YoloSwag1"
+    },
+    {
+      "id": "41a92f0d-5bec-45ec-b426-f0032bf9731e",
+      "email": "yolo4@swag.com",
+      "username": "yoloman4",
+      "password": "YoloSwag1"
+    },
+    {
+      "id": "67a41b18-75b2-46be-ad47-4371f5e22777",
+      "email": "yolo5@swag.com",
+      "username": "yoloman5",
+      "password": "YoloSwag1"
+    },
+    {
+      "id": "c9d29821-65de-4f6f-9dbc-308000e6bbbc",
+      "email": "yolo6@swag.com",
+      "username": "yoloman6",
+      "password": "YoloSwag1"
+    },
+    {
+      "id": "6817ae30-c6b5-4d24-991b-b0d3728d53eb",
+      "email": "yolo7@swag.com",
+      "username": "yoloman7",
+      "password": "YoloSwag1"
+    }
+  ]
+}

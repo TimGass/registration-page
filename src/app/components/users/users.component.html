@@ -1,0 +1,33 @@
+<app-header></app-header>
+<div class="users-wrap">
+  <mat-spinner *ngIf="users.length === 0"></mat-spinner>
+  <ul>
+    <li *ngFor="let user of users">
+      <mat-card class="users-card">
+        <mat-card-content>
+          <mat-card-title>{{user.username}}</mat-card-title>
+          <mat-card-subtitle> {{user.email}}
+          </mat-card-subtitle>
+        </mat-card-content>
+        <mat-card-content>
+          <!-- DELETE html tag below before production!!! -->
+          <!-- API should delete all password fields before returning data -->
+          <p>
+            password(I would normally never display this and an api should never send it): {{user.password}}
+          </p>
+        </mat-card-content>
+        <mat-card-content>
+          <p>
+            id: {{user.id}}
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </li>
+  </ul>
+</div>
+<mat-card class="users-footer">
+  <button *ngIf="pageInfo.page !== pageInfo.first" (click)="handlePage('first')" class="first-page" #next>First</button>
+  <button *ngIf="pageInfo.next" (click)="handlePage('next')" class="next-page" #next>Next</button>
+  <button *ngIf="pageInfo.prev" (click)="handlePage('back')" class="back-page" #back>Back</button>
+  <button *ngIf="pageInfo.page !== pageInfo.last" (click)="handlePage('last')" class="last-page" #back>Last</button>
+</mat-card>

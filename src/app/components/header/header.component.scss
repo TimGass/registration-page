@@ -1,0 +1,14 @@
+mat-toolbar {
+  text-align: center;
+  h1 {
+    margin: 0 auto;
+  }
+
+  a.active-route {
+    display: none;
+  }
+
+  a.invisible {
+    visibility: hidden;
+  }
+}

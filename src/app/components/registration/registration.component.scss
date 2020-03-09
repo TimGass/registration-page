@@ -1,0 +1,11 @@
+div.registration-wrap {
+  position: relative;
+  text-align: center;
+  
+  mat-card.registration-card {
+    display: inline-block;
+    margin: 10vh 0;
+    text-align: center;
+    padding: 40px;
+  }
+}
