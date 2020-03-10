@@ -133,7 +133,7 @@ describe('workspace-project App', () => {
     let title = element(by.css("h1")).getText();
     let url = await browser.getCurrentUrl();
     let endpoint = url.slice(url.lastIndexOf("/"));
-    expect(title).toBe("Register");
+    expect(title).toBe("Registration");
     expect(endpoint).toBe("/register");
   });
 

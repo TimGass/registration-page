@@ -11,10 +11,15 @@ export class HeaderComponent implements OnInit {
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
-    this.name =
-      this.route.snapshot.url
-        .toString()
-        .charAt(0)
-        .toUpperCase() + this.route.snapshot.url.toString().substring(1);
+    if(this.route.snapshot.url.toString() === 'register') {
+      this.name = "Registration";
+    }
+    else {
+      this.name =
+        this.route.snapshot.url
+          .toString()
+          .charAt(0)
+          .toUpperCase() + this.route.snapshot.url.toString().substring(1);
+    }
   }
 }
