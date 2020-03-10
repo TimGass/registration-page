@@ -57,7 +57,7 @@ describe("ValidateUsernameDirective", () => {
     fixture.detectChanges();
   });
 
-  it("should create component", () => {
+  it("should create component.", () => {
     expect(component).toBeDefined();
   });
 

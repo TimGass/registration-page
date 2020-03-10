@@ -33,7 +33,7 @@ describe('UsersComponent', () => {
     component.ngOnInit();
   }));
 
-  it('should create', () => {
+  it('should create.', () => {
     expect(component).toBeTruthy();
   });
 

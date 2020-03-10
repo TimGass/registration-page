@@ -15,7 +15,7 @@ describe('ValidationService', () => {
     service = TestBed.inject(ValidationService);
   });
 
-  it('should be created', async () => {
+  it('should be created.', async () => {
     expect(service).toBeTruthy();
   });
 });

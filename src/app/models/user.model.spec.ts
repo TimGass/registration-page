@@ -1,7 +1,7 @@
 import { User } from './user.model';
 
 describe('User', () => {
-  it('should create an instance', () => {
+  it('should create an instance.', () => {
     expect(
       new User({
         id: "dj19saqweqweqdasdasdas1-019iwjdqweq10ijd2",

@@ -51,7 +51,7 @@ describe('RegistrationComponent', () => {
     fixture.whenStable();
   }));
 
-  it('should create', () => {
+  it('should create.', () => {
     expect(component).toBeTruthy();
   });
 

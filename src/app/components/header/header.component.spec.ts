@@ -29,7 +29,7 @@ describe('HeaderComponent', () => {
     fixture.detectChanges();
   }));
 
-  it('should create', () => {
+  it('should create.', () => {
     expect(component).toBeTruthy();
   });
 
@@ -45,7 +45,7 @@ describe('HeaderComponent', () => {
     expect(router.url).toBe('/users');
   });
 
-  it('should display \'Registration\' on routes that aren\'t \'/register\'', async () => {
+  it('should display \'Registration\' on routes that aren\'t \'/register\'.', async () => {
     let users = fixture.debugElement.query(By.css("a[href='/users']"));
     users.nativeElement.click();
     await fixture.whenStable();
@@ -54,7 +54,7 @@ describe('HeaderComponent', () => {
     expect(register.nativeElement.textContent.trim()).toBe("Registration");
   });
 
-  it('should display \'Users\' on routes that aren\'t \'users\'',  async () => {
+  it('should display \'Users\' on routes that aren\'t \'/users\'.',  async () => {
     let register = fixture.debugElement.query(
       By.css("a[href='/register']")
     );
