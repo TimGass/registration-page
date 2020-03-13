@@ -54,7 +54,7 @@ describe('UsersComponent', () => {
       By.css("mat-card.users-footer > button.last-page")
     );
     expect(back).toBeTruthy();
-    expect(first).toBeTruthy();
+    expect(first).not.toBeTruthy();
     expect(next).not.toBeTruthy();
     expect(last).not.toBeTruthy();
     apiService.sendGetRequest(component.pageInfo.page).toPromise().then(payload => {
@@ -110,9 +110,9 @@ describe('UsersComponent', () => {
     if (component.pageInfo.page === component.pageInfo.first) {
       expect(back).not.toBeTruthy();
       expect(first).not.toBeTruthy();
+      expect(last).not.toBeTruthy();
     }
     expect(next).toBeTruthy();
-    expect(last).toBeTruthy();
     apiService
       .sendGetRequest(tempBack)
       .toPromise()

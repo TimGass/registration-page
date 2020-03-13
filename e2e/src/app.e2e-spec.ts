@@ -182,17 +182,6 @@ describe('workspace-project App', () => {
     next.click();
     //our user is still on the page!
     expect(element(by.cssContainingText("mat-card.users-card", id)).isPresent()).toBe(true);
-    let first = element(by.css("button.first-page"));
-    first.click();
-    expect(
-      element(by.cssContainingText("mat-card.users-card", id)).isPresent()
-    ).toBe(false);
-    expect(element(by.css("mat-card.users-card")).isPresent()).toBe(true);
-    let last = element(by.css("button.last-page"));
-    last.click();
-    expect(
-      element(by.cssContainingText("mat-card.users-card", id)).isPresent()
-    ).toBe(true);
   });
 
   afterEach(async () => {
